@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+
+  mysql:
+    image: mysql
+    tty: true 
+    container_name: mysql
+    hostname: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "1"
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    #command: ["tail -f /dev/null"]
