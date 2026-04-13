@@ -131,7 +131,13 @@
 			<artifactId>fr.opensagres.poi.xwpf.converter.pdf</artifactId>
 			<version>2.0.4</version>
 		</dependency>
-
+<!-- Source: https://mvnrepository.com/artifact/io.swagger/swagger-models -->
+<dependency>
+    <groupId>io.swagger</groupId>
+    <artifactId>swagger-models</artifactId>
+    <version>2.0.0-rc2</version>
+    <scope>compile</scope>
+</dependency>
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
@@ -143,7 +149,7 @@
 			<version>2.2.47</version>
 			<scope>compile</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.google.firebase</groupId>
 			<artifactId>firebase-admin</artifactId>

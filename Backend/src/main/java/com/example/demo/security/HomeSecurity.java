@@ -48,7 +48,7 @@ public class HomeSecurity {
     CorsConfigurationSource corsConfigurationSource() { // ✅ Khai báo corsConfigurationSource() ở đây
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of("https://front-end-lyart-eight.vercel.app",
-                "http://localhost:3000", "http://192.168.2.4:3000", "http://103.255.238.9")); // ✅ Cho phép React truy cập
+                "http://localhost:3000", "http://192.168.2.4:3000", "http://103.255.238.9", "http://localhost:9090/swagger-ui/index.html","http://localhost:9090")); // ✅ Cho phép React truy cập
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);

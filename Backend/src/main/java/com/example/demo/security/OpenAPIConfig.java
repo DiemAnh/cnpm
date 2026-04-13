@@ -1,28 +1,28 @@
 package com.example.demo.security;
 
-import io.swagger.v3.oas.models.Components;
-import io.swagger.v3.oas.models.OpenAPI;
-import io.swagger.v3.oas.models.info.Contact;
-import io.swagger.v3.oas.models.info.Info;
-import io.swagger.v3.oas.models.info.License;
-import io.swagger.v3.oas.models.security.SecurityRequirement;
-import io.swagger.v3.oas.models.security.SecurityScheme;
-import io.swagger.v3.oas.models.servers.Server;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import io.swagger.oas.models.Components;
+import io.swagger.oas.models.OpenAPI;
+import io.swagger.oas.models.info.Contact;
+import io.swagger.oas.models.info.Info;
+import io.swagger.oas.models.info.License;
+import io.swagger.oas.models.security.SecurityRequirement;
+import io.swagger.oas.models.security.SecurityScheme;
+import io.swagger.oas.models.servers.Server;
 
 import java.util.List;
 
 @Configuration
 @RequiredArgsConstructor
 public class OpenAPIConfig {
-    @Value("${nhom2.openapi.dev-url}")
-    private String devUrl;
+    
+    private String devUrl="http://localhost:9090/";;
 
-    @Value("${nhom2.openapi.prod-url}")
-    private String prodUrl;
+    
+    private String prodUrl="http://localhost:9090/";
 
     public SecurityScheme createApiKeyScheme() {
         return new SecurityScheme().type(SecurityScheme.Type.HTTP)
