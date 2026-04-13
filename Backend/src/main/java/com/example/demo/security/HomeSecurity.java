@@ -29,6 +29,7 @@ public class HomeSecurity {
                 .requestMatchers("/api/auth/**", "/user/**").permitAll()
                 .requestMatchers("/api/admin/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/parking-rentals/**").permitAll()
+                 .requestMatchers("/swagger-ui/**").permitAll()
                     .requestMatchers("/api/contribution-types/**").permitAll()
                     .requestMatchers("/api/contribution-types/admin/**").hasAuthority("ROLE_ADMIN")
                     .requestMatchers("/api/contributions/**").permitAll()
