@@ -26,7 +26,7 @@ public class HomeSecurity {
             .csrf(csrf -> csrf.disable())
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**", "/user/**").permitAll()
+                .requestMatchers("/api/auth/**", "/user/**", "/api/user/**", "/api/bills/**").permitAll()
                 .requestMatchers("/api/admin/**").hasAuthority("ROLE_ADMIN")
                 .requestMatchers("/api/parking-rentals/**").permitAll()
                  .requestMatchers("/swagger-ui/**").permitAll()

@@ -52,9 +52,9 @@ public class OpenAPIConfig {
                 .contact(contact)
                 .description("This API exposes endpoints to manage demo.").termsOfService("https://www.pasanabeysekara.com")
                 .license(mitLicense);
-        Components security = new Components().addSecuritySchemes("Bearer Authentication", createApiKeyScheme());
+        Components security = new Components().addSecuritySchemes("BearerAuth", createApiKeyScheme());
         return new OpenAPI()
-                .addSecurityItem(new SecurityRequirement().addList("Bearer Authentication"))
+                .addSecurityItem(new SecurityRequirement().addList("BearerAuth"))
                 .components(security)
                 .info(info)
                 .servers(List.of(devServer, prodServer));
